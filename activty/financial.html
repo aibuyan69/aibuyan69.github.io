@@ -4,20 +4,22 @@
     <title>Financial Tracker</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-image: url('https://www.backgroundsy.com/file/preview/shiny-gold-background.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
         }
         #container {
             width: 800px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); 
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #FFD700; 
         }
         form {
             margin: 20px 0;
@@ -27,6 +29,7 @@
         label {
             font-weight: bold;
             margin-bottom: 5px;
+            color: #FFD700; 
         }
         input[type="text"],
         input[type="number"] {
@@ -34,49 +37,55 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
         button[type="submit"] {
-            background-color: #007bff;
+            background-color: #FFD700; 
             color: #fff;
-            padding: 10px;
+            padding: 12px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.2s;
+            font-size: 16px;
         }
         button[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #FFC700; 
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            font-size: 16px;
         }
         table, th, td {
             border: 1px solid #ccc;
         }
         th, td {
-            padding: 10px;
+            padding: 12px;
             text-align: center;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #FFD700; 
+            color: #fff;
         }
         canvas {
             margin-top: 20px;
         }
         #summary {
             background-color: #f2f2f2;
-            padding: 10px;
+            padding: 12px;
             border-radius: 4px;
             margin-top: 20px;
         }
         #summary p {
             margin: 5px 0;
             font-weight: bold;
+            font-size: 18px;
         }
         h2 {
             margin-top: 20px;
+            color: #FFD700; 
         }
     </style>
 </head>
@@ -147,8 +156,8 @@
                 datasets: [{
                     label: "Expense",
                     data: amounts,
-                    backgroundColor: "rgba(75, 192, 192, 0.2)",
-                    borderColor: "rgba(75, 192, 192, 1)",
+                    backgroundColor: "rgba(255, 215, 0, 0.2)", /* Gold */
+                    borderColor: "rgba(255, 215, 0, 1)", /* Gold */
                     borderWidth: 1
                 }]
             };
@@ -201,4 +210,3 @@
     </script>
 </body>
 </html>
-
