@@ -43,73 +43,27 @@
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
+
+<!-- Navbar (hidden on small screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <a class="w3-bar-item w3-button w3-hover-black w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">FASHION BLOG</a>
-    <a href="#winefestivalschedule" class="w3-bar-item w3-button"><i class="fa fa-user"></i> WINE FESTIVAL SCHEDULE</a>
-    <a href="#portfolio" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DAVIES BURGER</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#fashionblog" class="w3-bar-item w3-button" onclick="toggleFunction()">FASHION BLOG</a>
-    <a href="#winefestivalschedule" class="w3-bar-item w3-button" onclick="toggleFunction()">WINE FESTIVAL SCHEDULE</a>
-    <a href="#davisburger" class="w3-bar-item w3-button" onclick="toggleFunction()">DAVIES BURGER</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
+  <div class="w3-display-topmiddle" style="white-space:nowrap;">
+    <div class="w3-bar w3-black">
+      <a href="#home" class="w3-bar-item w3-button">FASHION BLOG</a>
+      <a href="#winefestivalschedule" class="w3-bar-item w3-button"><i class="fa fa-user"></i> WINE FESTIVAL SCHEDULE</a>
+      <a href="#portfolio" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DAVIES BURGER</a>
+    </div>
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> ANGELO <span class="w3-hide-small"> CLYDE </span> M. IBUYAN</span>
   </div>
 </div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
-  </div>
-</div>
 
-<!-- Third Parallax Image with Wine Festival Schedule Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min" id="winefestivalschedule">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">WINE FESTIVAL SCHEDULE</span>
-  </div>
-</div>
 
-<script>
-// JavaScript for smooth scrolling
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("a[href^='#']");
-
-  for (const link of links) {
-    link.addEventListener("click", clickHandler);
-  }
-
-  function clickHandler(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  }
-});
-</script>
-
-</body>
-</html>
