@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Angelo Clyde M. Ibuyan Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
+  <title>Angelo Clyde M. Ibuyan Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {
+      height: 100%;
+      color: #777;
+      line-height: 1.8;
+    }
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+    /* Create a Parallax Effect */
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('https://wallpapercave.com/wp/wp2586787.jpg');
-  min-height: 100%;
-}
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url('https://wallpapercave.com/wp/wp2586787.jpg');
+      min-height: 100%;
+    }
 
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-</style>
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+      .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -50,8 +50,8 @@ body, html {
       <i class="fa fa-bars"></i>
     </a>
     <a href="#home" class="w3-bar-item w3-button">FASHION BLOG</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> WINE FESTIVAL SCHEDULE</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> DAVIES BURGER</a>
+    <a href="#winefestivalschedule" class="w3-bar-item w3-button"><i class="fa fa-user"></i> WINE FESTIVAL SCHEDULE</a>
+    <a href="#portfolio" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DAVIES BURGER</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
@@ -61,7 +61,7 @@ body, html {
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#fashionblog" class="w3-bar-item w3-button" onclick="toggleFunction()">FASHION BLOG</a>
     <a href="#winefestivalschedule" class="w3-bar-item w3-button" onclick="toggleFunction()">WINE FESTIVAL SCHEDULE</a>
-    <a href="#davisburger" class="w3-bar-item w3-button" onclick="toggleFunction()">DAVIS BURGER</a>
+    <a href="#davisburger" class="w3-bar-item w3-button" onclick="toggleFunction()">DAVIES BURGER</a>
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
@@ -74,13 +74,41 @@ body, html {
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
   </div>
 </div>
 
+<!-- Third Parallax Image with Wine Festival Schedule Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="winefestivalschedule">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">WINE FESTIVAL SCHEDULE</span>
+  </div>
+</div>
 
+<script>
+// JavaScript for smooth scrolling
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll("a[href^='#']");
+
+  for (const link of links) {
+    link.addEventListener("click", clickHandler);
+  }
+
+  function clickHandler(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  }
+});
 </script>
 
 </body>
