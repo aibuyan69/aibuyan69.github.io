@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Tracker</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
     <style>
+        
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background-image: url('https://www.psdstamps.com/wp-content/uploads/2021/10/gold-metal-texture.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
+            color: #333;
         }
 
         .container {
@@ -32,129 +36,119 @@
 
         h1 {
             font-family: 'Georgia', serif;
+            font-size: 2rem;
+            color: #444; 
+        }
+
+        
+        .balance {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .balance h2 {
+            font-size: 1.2rem;
+        }
+
+        .balance span {
+            font-size: 1.5rem;
             color: #333;
+            background-color: #FFD700;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 2px solid #000;
         }
 
-        .input-section {
-            background-color: #f7f7f7;
+        .transaction-list {
+            background-color: #FFD700;
             padding: 20px;
-            border-radius: 5px;
+            border-radius: 10px;
             margin-bottom: 20px;
+            border: 2px solid #000;
         }
 
-        h2 {
+        .transaction-list h2 {
             font-size: 1.2rem;
             color: #333;
         }
 
-        form {
+        .transaction-list ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .transaction-list li {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
         }
 
-        input[type="text"],
-        input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            background-color: #FFD700; 
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #C0A100; 
-        }
-
-        .transaction-list {
-    background-color: #FFD700; 
-    padding: 20px; 
-    border-radius: 10px; 
-    margin-bottom: 20px;
-    border: 2px solid #000; 
-}
-
-.transaction-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.transaction-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-        }
-
-        .balance {
-    text-align: center;
-    margin: 20px 0;
-    position: relative;
-}
-
-.balance span {
-    font-size: 1.5rem;
-    color: #333;
-    background-color: #FFD700; 
-    padding: 10px 20px; 
-    border-radius: 50px; 
-    display: inline-block;
-    border: 2px solid #000; 
-        }
-
-        .filter-section {
+        .total-income {
             text-align: center;
         }
 
-        select,
-        input[type="date"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        .total-income h2 {
+            font-size: 1.2rem;
         }
 
-        
-        .total-income {
-    text-align: center;
-}
-
-.total-income-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #FFD700;
-    color: #000; 
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    border: 2px solid #000; 
+        .total-income-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #FFD700;
+            color: #000;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            border: 2px solid #000;
         }
+
+        .categories {
+            text-align: center;
+        }
+
+        .categories h2 {
+            font-size: 1.2rem;
+        }
+
+        .categories ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .categories li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+       
     </style>
 </head>
 <body>
     <div class="container">
+        
         <header>
             <h1>Financial Tracker</h1>
         </header>
+
+        
         <div class="balance">
-            <h2>Balance:</h2>
-            <span>$100000</span>
+            <h2>Your Balance</h2>
+            <span>$100,000</span>
         </div>
+
+       
         <div class="transaction-list">
-            <h2>Viewing Transactions</h2>
+            <h2>Transactions</h2>
             <ul>
+                
                 <li>
                     <span>Date</span>
                     <span>Type</span>
@@ -167,24 +161,29 @@
                     <span>Income</span>
                     <span>Salary</span>
                     <span>Monthly Salary</span>
-                    <span>$50000</span>
+                    <span>$50,000</span>
                 </li>
                 <li>
                     <span>2023-09-19 1:00 PM</span>
                     <span>Expense</span>
                     <span>Water Bills</span>
                     <span>Monthly Water Bills</span>
-                    <span>-$1000</span>
+                    <span>-$1,000</span>
                 </li>
             </ul>
         </div>
+
+       
         <div class="total-income">
             <h2>Total Income</h2>
-            <div class="total-income-circle">$50000</div>
+            <div class="total-income-circle">$50,000</div>
         </div>
+
+       
         <div class="categories">
             <h2>Categories</h2>
             <ul>
+                
                 <li><span style="color: green;">Rent</span> <span>20%</span></li>
                 <li><span style="color: blue;">Food</span> <span>20%</span></li>
                 <li><span style="color: red;">Shopping</span> <span>10%</span></li>
@@ -192,25 +191,33 @@
                 <li><span style="color: blue;">Bills</span> <span>35%</span></li>
             </ul>
         </div>
+
+       
         <div class="input-section">
-            <h2>Adding Income</h2>
+            <h2>Add Income</h2>
             <form>
+                
                 <input type="text" placeholder="Source">
                 <input type="number" placeholder="Amount">
                 <button>Add Income</button>
             </form>
         </div>
+
+       
         <div class="input-section">
-            <h2>Adding Expenses</h2>
+            <h2>Add Expenses</h2>
             <form>
+                
                 <input type="text" placeholder="Category">
                 <input type="text" placeholder="Description">
                 <input type="number" placeholder="Amount">
                 <button>Add Expense</button>
             </form>
         </div>
+
+        
         <div class="filter-section">
-            <h2>Filtering Transactions</h2>
+            <h2>Filter Transactions</h2>
             <select>
                 <option value="all">All</option>
                 <option value="income">Income</option>
