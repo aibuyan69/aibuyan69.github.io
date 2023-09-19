@@ -4,7 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Tracker</title>
-<link rel="stylesheet" href="./assets/ccs/style3.css"></head>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        body {
+            background-image: url('https://www.psdstamps.com/wp-content/uploads/2021/10/gold-metal-texture.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            color: #333;
+        }
+
+        .input-section {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #FFD700; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #C0A100; 
+        }
+
+        .transaction-list ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .transaction-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .balance {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .balance span {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .filter-section {
+            text-align: center;
+        }
+
+        select,
+        input[type="date"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .categories {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .categories ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .categories li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <header>
@@ -47,8 +171,8 @@
                 <li>
                     <span>2023-09-17 05:00 PM</span>
                     <span>Expense</span>
-                    <span>WaterBills</span>
-                    <span>Monthly WaterBills</span>
+                    <span>Water Bills</span>
+                    <span>Monthly Water Bills</span>
                     <span>-$100</span>
                 </li>
                 <!-- More transactions here -->
@@ -75,7 +199,6 @@
                 <li><span style="color: red;">Shopping</span> <span>10%</span></li>
                 <li><span style="color: black;">Subscriptions</span> <span>5%</span></li>
                 <li><span style="color: blue;">Bills</span> <span>35%</span></li>
-                <!-- Add more categories here -->
             </ul>
         </div>
     </div>
