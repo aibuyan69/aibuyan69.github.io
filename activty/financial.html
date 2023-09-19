@@ -75,27 +75,41 @@
             background-color: #C0A100; 
         }
 
-        .transaction-list ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+        .transaction-list {
+    background-color: #FFD700; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    border: 2px solid #000; 
+}
 
-        .transaction-list li {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #ccc;
+.transaction-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
         }
 
         .balance {
-            text-align: center;
-            margin: 20px 0;
-        }
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
 
-        .balance span {
-            font-size: 1.5rem;
-            color: #333;
+.balance span {
+    font-size: 1.5rem;
+    color: #333;
+    background-color: #FFD700; 
+    padding: 10px 20px; 
+    border-radius: 50px; 
+    display: inline-block;
+    border: 2px solid #000; 
         }
 
         .filter-section {
@@ -109,23 +123,23 @@
             border-radius: 5px;
         }
 
-        .categories {
-            background-color: #f7f7f7;
-            padding: 20px;
-            border-radius: 5px;
-        }
+        
+        .total-income {
+    text-align: center;
+}
 
-        .categories ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .categories li {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            font-weight: bold;
+.total-income-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #FFD700;
+    color: #000; 
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid #000; 
         }
     </style>
 </head>
@@ -134,6 +148,50 @@
         <header>
             <h1>Financial Tracker</h1>
         </header>
+        <div class="balance">
+            <h2>Balance:</h2>
+            <span>$100000</span>
+        </div>
+        <div class="transaction-list">
+            <h2>Viewing Transactions</h2>
+            <ul>
+                <li>
+                    <span>Date</span>
+                    <span>Type</span>
+                    <span>Category</span>
+                    <span>Description</span>
+                    <span>Amount</span>
+                </li>
+                <li>
+                    <span>2023-09-15 10:00 PM</span>
+                    <span>Income</span>
+                    <span>Salary</span>
+                    <span>Monthly Salary</span>
+                    <span>$50000</span>
+                </li>
+                <li>
+                    <span>2023-09-19 1:00 PM</span>
+                    <span>Expense</span>
+                    <span>Water Bills</span>
+                    <span>Monthly Water Bills</span>
+                    <span>-$1000</span>
+                </li>
+            </ul>
+        </div>
+        <div class="total-income">
+            <h2>Total Income</h2>
+            <div class="total-income-circle">$50000</div>
+        </div>
+        <div class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><span style="color: green;">Rent</span> <span>20%</span></li>
+                <li><span style="color: blue;">Food</span> <span>20%</span></li>
+                <li><span style="color: red;">Shopping</span> <span>10%</span></li>
+                <li><span style="color: black;">Subscriptions</span> <span>5%</span></li>
+                <li><span style="color: blue;">Bills</span> <span>35%</span></li>
+            </ul>
+        </div>
         <div class="input-section">
             <h2>Adding Income</h2>
             <form>
@@ -151,37 +209,6 @@
                 <button>Add Expense</button>
             </form>
         </div>
-        <div class="transaction-list">
-            <h2>Viewing Transactions</h2>
-            <ul>
-                <li>
-                    <span>Date</span>
-                    <span>Type</span>
-                    <span>Category</span>
-                    <span>Description</span>
-                    <span>Amount</span>
-                </li>
-                <li>
-                    <span>2023-09-18 10:30 AM</span>
-                    <span>Income</span>
-                    <span>Salary</span>
-                    <span>Monthly Salary</span>
-                    <span>$2000</span>
-                </li>
-                <li>
-                    <span>2023-09-17 05:00 PM</span>
-                    <span>Expense</span>
-                    <span>Water Bills</span>
-                    <span>Monthly Water Bills</span>
-                    <span>-$100</span>
-                </li>
-                <!-- More transactions here -->
-            </ul>
-        </div>
-        <div class="balance">
-            <h2>Current Balance</h2>
-            <span>$1900</span>
-        </div>
         <div class="filter-section">
             <h2>Filtering Transactions</h2>
             <select>
@@ -190,16 +217,6 @@
                 <option value="expense">Expense</option>
             </select>
             <input type="date" placeholder="Select date">
-        </div>
-        <div class="categories">
-            <h2>Categories</h2>
-            <ul>
-                <li><span style="color: green;">Rent</span> <span>20%</span></li>
-                <li><span style="color: blue;">Food</span> <span>20%</span></li>
-                <li><span style="color: red;">Shopping</span> <span>10%</span></li>
-                <li><span style="color: black;">Subscriptions</span> <span>5%</span></li>
-                <li><span style="color: blue;">Bills</span> <span>35%</span></li>
-            </ul>
         </div>
     </div>
 </body>
