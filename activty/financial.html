@@ -1,212 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Tracker</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', sans-serif;
-            background-image: url('https://www.backgroundsy.com/file/preview/shiny-gold-background.jpg'); 
-            background-size: cover; 
-            background-repeat: no-repeat; 
-        }
-        #container {
-            width: 800px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.8); 
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #FFD700; 
-        }
-        form {
-            margin: 20px 0;
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #FFD700; 
-        }
-        input[type="text"],
-        input[type="number"] {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        button[type="submit"] {
-            background-color: #FFD700; 
-            color: #fff;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            font-size: 16px;
-        }
-        button[type="submit"]:hover {
-            background-color: #FFC700; 
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 16px;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-        th, td {
-            padding: 12px;
-            text-align: center;
-        }
-        th {
-            background-color: #FFD700; 
-            color: #fff;
-        }
-        canvas {
-            margin-top: 20px;
-        }
-        #summary {
-            background-color: #f2f2f2;
-            padding: 12px;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-        #summary p {
-            margin: 5px 0;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        h2 {
-            margin-top: 20px;
-            color: #FFD700; 
-        }
-    </style>
-</head>
+<link rel="stylesheet" href="./assets/ccs/style3.css"></head>
 <body>
-    <div id="container">
-        <h1>Financial Tracker</h1>
-        
-        <!-- Add Transaction Form -->
-        <form id="addTransactionForm">
-            <label for="description">Description:</label>
-            <input type="text" id="description" required>
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" required>
-            <button type="submit">Add Transaction</button>
-        </form>
-
-        <!-- Transaction Table -->
-        <h2>Transaction History</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody id="transactionList">
-                <!-- Transaction rows will be inserted here -->
-            </tbody>
-        </table>
-
-        <!-- Balance and Total -->
-        <h2>Summary</h2>
-        <div id="summary">
-            <p><strong>Total Expenses:</strong> $<span id="total">0.00</span></p>
-            <p><strong>Balance:</strong> $<span id="balance">0.00</span></p>
+    <div class="container">
+        <header>
+            <h1>Financial Tracker</h1>
+        </header>
+        <div class="input-section">
+            <h2>Adding Income</h2>
+            <form>
+                <input type="text" placeholder="Source">
+                <input type="number" placeholder="Amount">
+                <button>Add Income</button>
+            </form>
         </div>
-
-        <!-- Chart -->
-        <h2>Expense Chart</h2>
-        <canvas id="expenseChart"></canvas>
+        <div class="input-section">
+            <h2>Adding Expenses</h2>
+            <form>
+                <input type="text" placeholder="Category">
+                <input type="text" placeholder="Description">
+                <input type="number" placeholder="Amount">
+                <button>Add Expense</button>
+            </form>
+        </div>
+        <div class="transaction-list">
+            <h2>Viewing Transactions</h2>
+            <ul>
+                <li>
+                    <span>Date</span>
+                    <span>Type</span>
+                    <span>Category</span>
+                    <span>Description</span>
+                    <span>Amount</span>
+                </li>
+                <li>
+                    <span>2023-09-18 10:30 AM</span>
+                    <span>Income</span>
+                    <span>Salary</span>
+                    <span>Monthly Salary</span>
+                    <span>$2000</span>
+                </li>
+                <li>
+                    <span>2023-09-17 05:00 PM</span>
+                    <span>Expense</span>
+                    <span>WaterBills</span>
+                    <span>Monthly WaterBills</span>
+                    <span>-$100</span>
+                </li>
+                <!-- More transactions here -->
+            </ul>
+        </div>
+        <div class="balance">
+            <h2>Current Balance</h2>
+            <span>$1900</span>
+        </div>
+        <div class="filter-section">
+            <h2>Filtering Transactions</h2>
+            <select>
+                <option value="all">All</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <input type="date" placeholder="Select date">
+        </div>
+        <div class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><span style="color: green;">Rent</span> <span>20%</span></li>
+                <li><span style="color: blue;">Food</span> <span>20%</span></li>
+                <li><span style="color: red;">Shopping</span> <span>10%</span></li>
+                <li><span style="color: black;">Subscriptions</span> <span>5%</span></li>
+                <li><span style="color: blue;">Bills</span> <span>35%</span></li>
+                <!-- Add more categories here -->
+            </ul>
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // JavaScript for the financial tracker
-        const transactionList = document.getElementById("transactionList");
-        const descriptionInput = document.getElementById("description");
-        const amountInput = document.getElementById("amount");
-        const totalElement = document.getElementById("total");
-        const balanceElement = document.getElementById("balance");
-        const ctx = document.getElementById("expenseChart").getContext("2d");
-
-        const transactions = [];
-        let total = 0;
-
-        function updateSummary() {
-            totalElement.textContent = total.toFixed(2);
-            const balance = total >= 0 ? total : 0;
-            balanceElement.textContent = balance.toFixed(2);
-        }
-
-        function updateChart() {
-            const labels = transactions.map(transaction => transaction.description);
-            const amounts = transactions.map(transaction => transaction.amount);
-
-            const chartData = {
-                labels: labels,
-                datasets: [{
-                    label: "Expense",
-                    data: amounts,
-                    backgroundColor: "rgba(255, 215, 0, 0.2)", /* Gold */
-                    borderColor: "rgba(255, 215, 0, 1)", /* Gold */
-                    borderWidth: 1
-                }]
-            };
-
-            const chartConfig = {
-                type: 'bar',
-                data: chartData,
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            };
-
-            new Chart(ctx, chartConfig);
-        }
-
-        function addTransaction(description, amount) {
-            total += amount;
-            const transaction = { description, amount };
-            transactions.push(transaction);
-            const newRow = document.createElement("tr");
-            newRow.innerHTML = `
-                <td>${description}</td>
-                <td>$${amount.toFixed(2)}</td>
-            `;
-            transactionList.appendChild(newRow);
-            updateSummary();
-            updateChart();
-        }
-
-        const addTransactionForm = document.getElementById("addTransactionForm");
-        addTransactionForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const description = descriptionInput.value;
-            const amount = parseFloat(amountInput.value);
-
-            if (!description || isNaN(amount)) {
-                alert("Please enter a valid description and amount.");
-                return;
-            }
-
-            addTransaction(description, amount);
-            descriptionInput.value = "";
-            amountInput.value = "";
-        });
-    </script>
 </body>
 </html>
