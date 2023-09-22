@@ -1,111 +1,120 @@
-<style>
-body, h1, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-
 body {
-  background-image: url('https://media.giphy.com/media/s21vSu4sE0yis/giphy.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-}
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_foodlogo.png");
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  nav {
+    text-align: center;
+  }
+  
+  nav img {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+  }
+  
+  nav span {
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin: 10px 0;
+  }
+  
+  nav a {
+    color: #666666;
+  }
+  
+  nav a:hover {
+    color: white;
+    background-color: #05A8AA;
+    padding: 5px;
+  }
+  
+  
+  .content {
+    height: 500px;
+    margin: 10px auto;
+    width: 100%;
+  }
 
-header {
-  background-color: #fff;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.logo img {
-  height: 40px;
-  width: auto;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin-right: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-  color: #ff6f61;
-}
-
-/* Style the main content */
-.content {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.header h1 {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.body p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff6f61;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.button:hover {
-  background-color: #d65042;
-}
-
-.nutrition {
-  list-style: none;
-  display: flex;
-  margin-top: 20px;
-}
-
-.nutrition li {
-  margin-right: 20px;
-}
-
-.category {
-  font-weight: 700;
-}
-
-.value {
-  font-weight: 500;
-}
-</style>
+  
+  .header {
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 320px;
+  }
+  
+  .header h1 {
+    background-color: #05A8AA;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 68%;
+  }
+  
+  .content .body {
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .body p {
+    color: #333333;
+    font-weight: 100;
+    line-height: 34px;
+    width: 90%;
+    margin-top: 18px;
+  }
+  
+  .button {
+    border: 1px solid #05A8AA;
+    border-radius: 4px;
+    color: #05A8AA;
+    display: block;
+    font-weight: 700;
+    margin: 40px auto;
+    padding: 20px;
+    width: 200px;
+  }
+  
+  .button:hover {
+    background-color: #05A8AA;
+    border: 1px solid #05A8AA;
+    color: #FFF;
+  }
+  ul.nutrition {
+    padding: 20px;
+  }
+  
+  ul.nutrition li {
+    display: inline-block;
+    background-color: #05A8AA;
+    list-style: none;
+    margin-bottom: 3px;
+    padding: 10px 20px;
+    width: 200px;
+  }
+  
+  .nutrition .category {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    display: block;
+  }
+  
+  .nutrition .value {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
