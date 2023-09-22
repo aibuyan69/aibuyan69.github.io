@@ -1,73 +1,149 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Davie JR's Menu</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,500,700|Oswald:300,400,700" rel="stylesheet">
-  <link rel="stylesheet"  href="/assets/css
-/style.css">
 
+<head>
+    <title>Davie's Burger</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,500,700|Oswald:300,400,700" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://c.tenor.com/rd6D2wMN7psAAAAd/burger-food.gif'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #f6b101;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            color: #f6b101;
+        }
+
+        .body {
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f6b101;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .nutrition {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .nutrition li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .category {
+            font-weight: bold;
+            color: #f6b101;
+        }
+
+        .value {
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Navigation Section -->
+   
 
-  <nav>
-    <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" />
-    <span><a href="#">MENU</a></span>
-    <span><a href="#">NUTRITION</a></span>
-    <span><a href="#">ORDER</a></span>
-    <span><a href="#">LOCATIONS</a></span>
-  </nav>
+    <nav>
+        <span><a href="#">MENU</a></span>
+        <span><a href="#">NUTRITION</a></span>
+        <span><a href="#">ORDER</a></span>
+        <span><a href="#">LOCATIONS</a></span>
+    </nav>
 
-  <!-- Content Section -->
+  
 
-  <div class="content">
+    <div class="content">
 
-    <!-- Content Header -->
-    
-    <div class="header">
-      <h1>BBQ BACON BURGER</h1>
-    </div>
+        
 
-    <!-- Content Body -->
+        <div class="header">
+            <h1>BBQ BACON BURGER</h1>
+        </div>
 
-    <div class="body">
-      <p>
-        Our BBQ Bacon Burger features our special house ground blend of wagyu and sirloin, spiced perfectly, and finished off with just a drop of white truffle oil. A butter grilled brioche bun layered with roasted red onion, perfectly crispy pork belly, and our hickory smoked BBQ sauce.
-      </p>
+       
 
-      <!-- Order Button -->
+        <div class="body">
+            <p>
+                Our BBQ Bacon Burger features our special house ground blend of wagyu and sirloin, spiced perfectly,
+                and finished off with just a drop of white truffle oil. A butter grilled brioche bun layered with roasted
+                red onion, perfectly crispy pork belly, and our hickory smoked BBQ sauce.
+            </p>
 
-      <a href="#" class="button">ORDER NOW</a>
+          
 
-      <!-- Nutrition Information -->
-      
-      <ul class="nutrition">
-        <li>
-          <span class="category">CALORIES</span>
-          <span class="value">678</span>
-        </li>
-        <li>
-          <span class="category">FAT</span>
-          <span class="value">32</span>
-        </li>
-        <li>
-          <span class="category">PROTEIN</span>
-          <span class="value">8</span>
-        </li>
-        <li>
-          <span class="category">CARBOHYDRATES</span>
-          <span class="value">34</span>
-        </li>
-        <li>
-          <span class="category">SODIUM</span>
-          <span class="value">112</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
+            <a href="#" class="button">ORDER NOW</a>
+
+           
+
+            <ul class="nutrition">
+                <li>
+                    <span class="category">CALORIES</span>
+                    <span class="value">678</span>
+                </li>
+                <li>
+                    <span class="category">FAT</span>
+                    <span class="value">32</span>
+                </li>
+                <li>
+                    <span class="category">PROTEIN</span>
+                    <span class="value">8</span>
+                </li>
+                <li>
+                    <span class="category">CARBOHYDRATES</span>
+                    <span class="value">34</span>
+                </li>
+                <li>
+                    <span class="category">SODIUM</span>
+                    <span class="value">112</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </body>
-</html>
 
+</html>
