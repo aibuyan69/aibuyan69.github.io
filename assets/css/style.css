@@ -1,10 +1,10 @@
-/* Reset some default styles */
+<style>
 body, h1, p, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* Apply a background image */
+
 body {
   background-image: url('path-to-your-background-image.jpg');
   background-size: cover;
@@ -13,7 +13,6 @@ body {
   color: #333;
 }
 
-/* Style the header and navigation */
 header {
   background-color: #fff;
   padding: 10px 0;
@@ -109,3 +108,4 @@ nav {
 .value {
   font-weight: 500;
 }
+</style>
