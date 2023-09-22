@@ -1,88 +1,111 @@
-<style>
-  body {
-    background-image: url('https://assets.cntraveller.in/photos/6246f468c579dd6f2d1244b6/1:1/w_1591,h_1591,c_limit/Best%20Burgers%20in%20Mumbai%20_Louis%20Monstercheese%20Burger.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-  }
+/* Reset some default styles */
+body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
 
-  header {
-    background-color: #fff;
-    padding: 20px;
-  }
+/* Apply a background image */
+body {
+  background-image: url('path-to-your-background-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
 
-  header nav img {
-    width: 100px;
-    height: auto;
-  }
+/* Style the header and navigation */
+header {
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  header ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  header ul li {
-    display: inline;
-    margin-right: 20px;
-  }
+.logo img {
+  height: 40px;
+  width: auto;
+}
 
-  header ul li:last-child {
-    margin-right: 0;
-  }
+.nav-links {
+  list-style: none;
+  display: flex;
+}
 
-  header a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 16px;
-  }
+.nav-links li {
+  margin-right: 20px;
+}
 
-  main.content {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-  }
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
 
-  .header h1 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-  }
+.nav-links a:hover {
+  color: #ff6f61;
+}
 
-  .body p {
-    font-size: 18px;
-    line-height: 1.5;
-  }
+/* Style the main content */
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 18px;
-  }
+.header h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
 
-  .nutrition {
-    list-style-type: none;
-    padding: 0;
-  }
+.body p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
 
-  .nutrition li {
-    margin-bottom: 10px;
-  }
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
 
-  .category {
-    font-weight: 700;
-  }
+.button:hover {
+  background-color: #d65042;
+}
 
-  .value {
-    font-weight: 500;
-  }
-</style>
+.nutrition {
+  list-style: none;
+  display: flex;
+  margin-top: 20px;
+}
+
+.nutrition li {
+  margin-right: 20px;
+}
+
+.category {
+  font-weight: 700;
+}
+
+.value {
+  font-weight: 500;
+}
